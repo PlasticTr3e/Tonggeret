@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b3a4b;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1f2a38;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .brand {
+  font-size: 1.5em;
+  color: #4aa8d4;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.navbar-left .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-left .nav-links li {
+  margin-right: 20px;
+}
+
+.navbar-left .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right form {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-right form input[type="search"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #293849;
+  color: white;
+}
+
+.navbar-right form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navbar-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+/* Carousel section */
+.carousel-section {
+  margin: 40px 20px;
+}
+
+.carousel-section h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 150px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.carousel-item h3 {
+  font-size: 14px;
+  margin-top: 8px;
+  color: white;
+}
+
+.carousel-prev,
+.carousel-next {
+  background-color: #47617a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+/* Hide scrollbar for carousel */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Search results section */
+#searchResults {
+  padding: 20px;
+}
+
+.movie-card {
+  display: inline-block;
+  width: 150px;
+  height: 320px; /* Set a fixed height for consistency */
+  margin: 10px;
+  text-align: center;
+  vertical-align: top; /* Align all cards to the top */
+}
+
+/* Consistent size for images */
+.movie-card img {
+  width: 100%;
+  height: 225px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the set dimensions */
+  border-radius: 8px;
+}
+
+/* Title can span up to two lines */
+.movie-card h3 {
+  font-size: 14px;
+  margin-top: 8px;
+  color: white;
+  height: 40px; /* Set a fixed height to maintain alignment */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit title to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Hide the overflow if text is too long */
+  text-overflow: ellipsis; /* Add '...' if text exceeds the height */
+}
